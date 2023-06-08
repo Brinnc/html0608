@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        - string(문자열) 관련기능 : 내장객체 -
+
+        선언방법1) let str="나는오늘배고프다"; 
+        선언방법2) let s=new String("나는오늘배고프다");
+
+        #문자열의 길이 출력
+        str.length; -> 8
+
+        #문자열 전체 중 일부 문자열만 추출해 출력
+        sub String(index, n) -> index: 추출을 시작할 문자열의 index
+                                      -> n: 추출 범위 마지막 index인데 제외되는 index
+                                               즉, (0, 6)까지면 0~5까지의 문자를 출력함
+        */
+
+        let str = "동해물과 백두산이 마르고";
+        console.log("문자열의 길이는", str.length);
+
+        if (str.length > 6) { //...처리의 대상이 된다면
+            let result = str.substring(0, 6); //(추출시작할 index, 제외되는 index)
+            console.log(result + "..");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

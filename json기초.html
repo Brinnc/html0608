@@ -1,0 +1,23 @@
+<script>
+    //json은 프로그램언어가 아닌 문자열일 뿐임★
+    //표기법을 js의 객체 표기를 따르는 것
+    //따라서 문자열인 json표기법을 객체처럼 사용하려면 '파싱'해야함.
+    let json="{";
+    json+=" \"name\":\"SA\", ";
+    json+=" \"age\": 30 ";
+    json+="}";
+    //여기까지는 단지 문자열일 뿐임
+
+    //JSON내장객체를 통해 해석(파싱)한 후부터 객체가됨
+    let obj=JSON.parse(json);
+    //console.log(obj.name);
+
+    //js는 아래의 코드를 json표기법으로 작성할 경우, JSON 내장객체로 인식하며
+    //별도로 parsing할 필요가 없음. 즉, 자체가 json 내장객체임
+    let x={
+        name: "marco",
+        age: 34
+    };
+
+    console.log(x.name);
+</script>
